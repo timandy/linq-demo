@@ -8,9 +8,16 @@ import org.junit.jupiter.api.Test;
  */
 class WhereTest {
     @Test
-    void test1() {
+    void where() {
         var source = Linq.of(0, 1, 2, 3, 4);
         var result = source.where(a -> a > 2).toList();
+        System.out.println(result);
+    }
+
+    @Test
+    void whereSelect() {
+        var source = Linq.of(3, 4, 1, 2);
+        var result = source.where(a -> a % 2 == 0).select(a -> a * 2).toList();
         System.out.println(result);
     }
 }

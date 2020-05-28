@@ -20,4 +20,11 @@ class WhereTest {
         var result = source.where(a -> a % 2 == 0).select(a -> a * 2).toList();
         System.out.println(result);
     }
+
+    @Test
+    void ofType() {
+        var source = Linq.of("Hello", 6, 7, "World", 2, "!");
+        var result = source.ofType(String.class).joining(" ");
+        System.out.println(result);
+    }
 }

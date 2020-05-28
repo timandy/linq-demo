@@ -17,3 +17,13 @@ System.out.println(result);
 [8, 4]
 ```
 Powered by [linq](https://github.com/timandy/linq)
+
+- 每日一条
+``` java11
+var source = Linq.of("Hello", 6, 7, "World", 2, "!");
+var result = source.ofType(String.class).joining(" ");
+System.out.println(result);
+----print
+Hello World !
+```
+Powered by [linq](https://github.com/timandy/linq)
